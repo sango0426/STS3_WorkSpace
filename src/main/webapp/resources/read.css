@@ -1,0 +1,104 @@
+@charset "UTF-8";
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/resources/backgroundtarkov.jpg'); /* 이미지 파일 경로를 실제 파일 경로로 변경해주세요 */
+    background-size: cover;
+    background-position: center;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#wrapper_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+#wrapper_top_logo img {
+    width: 250px; /* 로고 이미지 크기 조절 */
+}
+
+#wrapper_top_advertisement img {
+    width: 700px; /* 광고 이미지 크기 조절 */
+}
+
+#wrapper_top_login {
+    display: flex;
+    gap: 10px;
+}
+
+#wrapper_top_login button {
+    padding: 8px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#wrapper_top_login button:hover {
+    background-color: #45a049;
+}
+
+#wrapper_body_post {
+    padding: 20px;
+    text-align: center;
+}
+
+#body_post_num {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#body_post_text {
+    font-size: 16px;
+}
+
+#wrapper_body_bottom {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽으로 몰리도록 설정 */
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+#body_bottom_del,
+#body_bottom_modify,
+#body_bottom_toList {
+    margin-top: 20px;
+    gap: 20px; /* 간격을 작게 조절 */
+}
+
+#body_bottom_del a,
+#body_bottom_modify a,
+#body_bottom_toList a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px; /* 오른쪽 여백을 추가 */
+}
+
+#body_bottom_del a:hover,
+#body_bottom_modify a:hover,
+#body_bottom_toList a:hover {
+    background-color: #45a049;
+}

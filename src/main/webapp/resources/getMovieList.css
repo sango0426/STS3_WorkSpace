@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* getMovieList.css */
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f2f2f2;
+	margin: 0;
+	padding: 0;
+}
+
+#title {
+	background-color: #333;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+#date {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+.category_title {
+	display: flex;
+	background-color: #ddd;
+	font-weight: bold;
+}
+
+.category_title>div {
+	flex: 1; /* 각 항목이 동일한 공간을 차지하도록 추가 */
+	padding: 10px; /* 각 항목의 패딩을 조절 */
+	text-align: center; /* 가운데 정렬 */
+	border-right: 1px solid #aaa; /* 우측 구분선 추가 */
+}
+
+.category_title .movie_num, .category_title .movie_rank {
+	width: 30px; /* movie_num과 movie_rank의 너비를 좁게 조절 */
+	font-weight: bold; /* 굵은 글꼴 적용 */
+}
+
+#list {
+	display: flex;
+	flex-direction: column; /* 열 방향으로 변경 */
+}
+
+.list_list {
+	display: flex;
+	flex-wrap: wrap; /* 여러 열을 수직으로 표시하도록 추가 */
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+}
+
+.list_list>div {
+	flex: 1; /* 나머지 항목은 동일한 공간을 차지하도록 추가 */
+	padding: 10px; /* 각 항목의 패딩을 조절 */
+	text-align: center; /* 가운데 정렬 */
+	border-right: 1px solid #aaa; /* 우측 구분선 추가 */
+}
+
+.movie_num, .movie_rank {
+	width: 30px; /* movie_num과 movie_rank의 너비를 좁게 조절 */
+	text-align: center; /* 가운데 정렬 */
+	font-weight: bold; /* 굵은 글꼴 적용 */
+}
+
+.list_list:last-child {
+	border-bottom: none;
+}
+
+/* Optional: Responsiveness */
+@media screen and (max-width: 600px) {
+	.list_list {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.list_list div {
+		margin-bottom: 5px;
+		border-right: none; /* 모바일에서는 우측 구분선 제거 */
+	}
+}

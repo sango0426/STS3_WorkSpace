@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/resources/backgroundtarkov.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#wrapper_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+#wrapper_top_logo img {
+    width: 200px;
+}
+
+#wrapper_top_advertisement img {
+    max-width: 100%;
+    height: auto;
+}
+
+#wrapper_top_login {
+    display: flex;
+    gap: 20px;
+}
+
+#wrapper_top_login button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#wrapper_top_login button:hover {
+    background-color: #45a049;
+}
+
+#form_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#form_wrapper #wrapper_num {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#form_wrapper hr {
+    width: 650px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+#form_wrapper #wrapper_body_title input {
+    width: 650px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#form_wrapper #wrapper_body_text textarea {
+    width: 650px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#form_wrapper input[type="submit"] {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#form_wrapper input[type="submit"]:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.peisia.mapper.GuestMapper">
+
+	<!-- 매퍼의 namespace는 인터페이스의 경로를 나타냅니다. GuestMapper 인터페이스에 정의된 메서드들에 대한 SQL을 
+		작성합니다. -->
+
+	<!-- 게시물 리스트를 가져오는 쿼리 -->
+	<select id="getList" resultType="com.peisia.dto.GuestDto">
+		<!-- tbl_guest 테이블에서 페이지에 해당하는 데이터를 가져옵니다. -->
+		SELECT * from ${@com.peisia.dto.GuestDto@TABLE_NAME_GUEST} limit
+		#{page},3
+	</select>
+
+	<!-- 전체 게시물 수를 가져오는 쿼리 -->
+	<select id="getTotalCount" resultType="int">
+		<!-- tbl_guest 테이블의 전체 데이터 수를 가져옵니다. -->
+		SELECT count(*) from ${@com.peisia.dto.GuestDto@TABLE_NAME_GUEST}
+	</select>
+
+	<!-- 특정 게시물을 읽어오는 쿼리 -->
+	<select id="read" resultType="com.peisia.dto.GuestDto">
+		<!-- bno에 해당하는 게시물을 가져옵니다. -->
+		select * from tbl_guest where bno = #{bno}
+	</select>
+
+	<!-- 특정 게시물을 삭제하는 쿼리 -->
+	<delete id="del">
+		delete from tbl_guest where bno = #{bno}
+	</delete>
+
+	<!-- 새로운 게시물을 작성하는 쿼리 -->
+	<insert id="write">
+		insert into tbl_guest (btitle, btext) values (#{btitle}, #{btext})
+	</insert>
+
+	<!-- 게시물을 수정하는 쿼리 -->
+	<update id="modify">
+		update tbl_guest set btitle = #{btitle}, btext = #{btext} where bno = #{bno}
+	</update>
+</mapper>

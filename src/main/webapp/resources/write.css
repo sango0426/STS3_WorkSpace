@@ -1,0 +1,92 @@
+@charset "UTF-8";
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/resources/backgroundtarkov.jpg'); /* 배경 이미지 경로를 설정해주세요 */
+    background-size: cover;
+    background-position: center;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#wrapper_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+#wrapper_top_logo img {
+    width: 250px;
+}
+
+#wrapper_top_advertisement img {
+    width: 650px;
+}
+
+#wrapper_top_login {
+    display: flex;
+    gap: 20px;
+}
+
+#wrapper_top_login button {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#wrapper_top_login button:hover {
+    background-color: #45a049;
+}
+
+#form_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 가운데 정렬을 위한 스타일 추가 */
+    padding: 20px;
+}
+
+#form_wrapper #wrapper_body_title,
+#form_wrapper textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#form_wrapper textarea {
+    height: 300px; /* 텍스트 영역의 높이 조절 */
+}
+
+#form_wrapper input[type="submit"] {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#form_wrapper input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#form_wrapper input[type="text"] {
+		
+}
